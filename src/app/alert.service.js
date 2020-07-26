@@ -2,7 +2,6 @@ class AlertService {
     constructor() {
         this.errorBox = document.getElementById("error");
     }
-
     
     handleAdditionError (inputs, numbers) {
         const fullMessage = inputs.reduce((message, str, index) => {
