@@ -2,13 +2,8 @@ const path = require("path");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: "development",
-    //devtool: "none",
+    //devtool: "none", //remove eval function from main.js
     entry: "./src/index.js",
-    output: {
-        filename: "main.[contentHash].js", //cache-busting
-        path: path.resolve(__dirname, "dist")
-    },
     plugins: [new HtmlWebpackPlugin({
         template: "./src/template.html"
     })],
