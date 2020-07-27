@@ -3,7 +3,10 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     //devtool: "none", //remove eval function from main.js
-    entry: "./src/index.js",
+    entry: {
+        main: "./src/index.js",
+        vendor: "./src/vendor.js"
+    },
     plugins: [new HtmlWebpackPlugin({
         template: "./src/template.html"
     })],
